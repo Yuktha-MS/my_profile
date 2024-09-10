@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Smooth Scroll to Sections
+    // Smooth Scrolling to Sections
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Scroll to Top Button
-    const scrollToTopButton = document.querySelector('.scroll-up .btn');
+    const scrollToTopButton = document.querySelector('.scroll-up button');
     window.addEventListener('scroll', function () {
         if (window.scrollY > 300) {
             scrollToTopButton.style.opacity = 1;
@@ -29,9 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Toggle Navbar Menu for Mobile
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarMenu = document.querySelector('.navbar-collapse');
-    navbarToggler.addEventListener('click', function () {
-        navbarMenu.classList.toggle('show');
-    });
+    
+    if (navbarToggler && navbarMenu) {
+        navbarToggler.addEventListener('click', function () {
+            navbarMenu.classList.toggle('show');
+        });
+    }
 
     // Jumbotron Pop-Up Effect
     const jumbotronItems = document.querySelectorAll('.jumbotron .education-item, .jumbotron .certification-item, .jumbotron .project-item, .jumbotron .info-item');
