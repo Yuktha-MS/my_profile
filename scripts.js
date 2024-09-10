@@ -8,7 +8,7 @@ function scrollToTop() {
 
 // Function to animate progress bars
 function animateProgressBars() {
-    const progressBars = document.querySelectorAll('.progress');
+    const progressBars = document.querySelectorAll('.progress-bar');
 
     progressBars.forEach(bar => {
         const value = bar.getAttribute('data-value');
