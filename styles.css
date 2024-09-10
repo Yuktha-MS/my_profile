@@ -1,86 +1,64 @@
-/* General Styling */
+/* GLOBAL STYLES */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-.hero-section {
-    background: url('images/hero-bg.jpg') no-repeat center center;
-    background-size: cover;
-    color: #fff;
-    padding: 100px 0;
-}
-
-.hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero-section p {
-    font-size: 1.5rem;
-}
-
-/* Navigation Bar */
 .navbar {
-    padding: 15px;
+    margin-bottom: 0;
 }
 
 .navbar-brand {
-    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-/* Sections */
-section {
-    padding: 60px 0;
+.nav-link {
+    font-size: 1rem;
+    margin-left: 15px;
 }
 
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
+/* HERO SECTION */
+.hero {
+    background: #282c34;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* Footer */
-footer {
-    background-color: #f8f9fa;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-/* Scroll to Top Button */
-.scroll-to-top {
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* BACK TO TOP BUTTON */
+#scrollToTop {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    cursor: pointer;
-    font-size: 24px;
     display: none;
-    z-index: 1000;
 }
 
-.scroll-to-top:hover {
-    background-color: #0056b3;
-}
-
-/* Animations */
-.animate__animated {
-    visibility: hidden;
-}
-
-.animate__fadeIn {
-    visibility: visible;
-    animation: fadeIn 1s;
+/* ANIMATIONS */
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
