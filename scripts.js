@@ -1,49 +1,31 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Smooth Scrolling to Sections
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+// Function to scroll to the top of the page
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
+}
 
-    // Scroll to Top Button
-    const scrollToTopButton = document.querySelector('.scroll-up button');
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 300) {
-            scrollToTopButton.style.opacity = 1;
-        } else {
-            scrollToTopButton.style.opacity = 0;
-        }
-    });
-
-    scrollToTopButton.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
+// Function to add a scroll effect to navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
     });
-
-    // Toggle Navbar Menu for Mobile
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarMenu = document.querySelector('.navbar-collapse');
-    
-    if (navbarToggler && navbarMenu) {
-        navbarToggler.addEventListener('click', function () {
-            navbarMenu.classList.toggle('show');
-        });
-    }
-
-    // Jumbotron Pop-Up Effect
-    const jumbotronItems = document.querySelectorAll('.jumbotron .education-item, .jumbotron .certification-item, .jumbotron .project-item, .jumbotron .info-item');
-    jumbotronItems.forEach(item => {
-        item.addEventListener('mouseover', function () {
-            this.style.transform = 'scale(1.05)';
-        });
-        item.addEventListener('mouseout', function () {
-            this.style.transform = 'scale(1)';
-        });
-    });
 });
+
+// Function to handle the sticky navbar
+window.onscroll = function() {
+    const navbar = document.querySelector('.navbar');
+    const scrollUpButton = document.querySelector('.scroll-up button');
+
+    if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scrolled');
+        scrollUpButton.style.display = 'block';
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+        scrollUpButton.style.display = 'none';
+    }
+};
