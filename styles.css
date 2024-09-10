@@ -42,6 +42,7 @@ nav ul li a:hover {
 
 section {
     padding: 60px 20px;
+    margin-top: 80px; /* Ensure content is not hidden behind the fixed header */
 }
 
 section#home {
@@ -123,4 +124,3 @@ section#resume table th {
     vertical-align: middle;
     margin-right: 8px;
 }
-
