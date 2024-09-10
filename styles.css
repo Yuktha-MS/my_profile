@@ -227,8 +227,7 @@ footer p {
 
 .profile-img {
     max-width: 100%;
-    height: auto;
-    border-radius: 50%; /* Makes the profile picture circular */
+   /* height: auto; */
 }
 
 .profile-text {
@@ -240,9 +239,10 @@ footer p {
     color: #fff; /* White text */
     padding: 1rem;
     border-radius: 1px; /* Rounded corners */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  Shadow for better visibility */
-    /* max-width: 300px;  Limit width */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  Shadow for better visibility */
+    max-width: 300px;  Limit width */
     text-align: right; /* Align text to the right */
+    */
 }
 
 .lead {
@@ -264,4 +264,4 @@ footer p {
     font-style: italic; /* Italic text */
 }
 
-
+*/
