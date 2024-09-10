@@ -1,14 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff;
     color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: #4a90e2;
     color: white;
     padding: 1rem;
     position: fixed;
@@ -23,31 +23,86 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #ff9f00;
+}
+
+header .scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.scroll-up button {
+    background-color: #ff9f00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-up button:hover {
+    background-color: #ff6f00;
+    transform: scale(1.1);
 }
 
 section {
     padding: 60px 20px;
-    margin-top: 80px; /* Ensure content is not hidden behind the fixed header */
+    margin-top: 80px;
 }
 
 section#home {
-    background-color: #ececec;
+    background: linear-gradient(135deg, #4a90e2, #50e3c2);
+    color: white;
     text-align: center;
+    padding: 80px 20px;
+    border-radius: 10px;
+}
+
+section#home h1 {
+    font-size: 2.5rem;
+}
+
+section#home p {
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    background-color: #ff9f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #ff6f00;
+    transform: scale(1.05);
 }
 
 section#about,
@@ -56,8 +111,9 @@ section#contact {
     background-color: #fff;
     margin: 20px auto;
     max-width: 1200px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
 }
 
 section#resume table {
@@ -69,34 +125,13 @@ section#resume table {
 section#resume table th,
 section#resume table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px;
     text-align: left;
 }
 
 section#resume table th {
-    background-color: #f2f2f2;
-}
-
-.scroll-up {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-.scroll-up button {
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    cursor: pointer;
-    outline: none;
-}
-
-.scroll-up button:hover {
-    background-color: #555;
+    background-color: #f4f4f4;
+    font-weight: bold;
 }
 
 #contact ul {
@@ -111,7 +146,8 @@ section#resume table th {
 
 #contact a {
     text-decoration: none;
-    color: #333;
+    color: #4a90e2;
+    font-weight: bold;
 }
 
 #contact a:hover {
@@ -119,8 +155,8 @@ section#resume table th {
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     vertical-align: middle;
     margin-right: 8px;
 }
