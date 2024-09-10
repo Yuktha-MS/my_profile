@@ -1,159 +1,215 @@
-/* Basic Reset */
-body, h1, h2, h3, h4, p {
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f0f8f5; /* Light green background */
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f8f0; /* Light background color */
-    color: #333;
+h1, h2, h3, h4 {
+    color: #2d6a4f; /* Darker green for headings */
 }
 
-/* Navbar */
+p {
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Styles */
 .navbar {
-    background-color: #e2e6ea; /* Light gray background for navbar */
+    position: fixed;
+    width: 100%;
+    background-color: #2d6a4f;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
+.navbar ul {
+    display: flex;
+    gap: 15px;
 }
 
-.nav-link {
-    font-size: 1.2rem;
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
 }
 
-.navbar-nav {
-    margin-left: auto;
+.navbar ul li a:hover {
+    color: #80ed99;
 }
 
-.navbar-toggler {
-    border-color: #007bff;
+.navbar-scrolled {
+    background-color: #1b4332; /* Darker green when scrolled */
 }
 
-.navbar-toggler-icon {
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath stroke="%23fff" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/%3E%3C/svg%3E');
-}
-
-/* Jumbotron */
-.jumbotron {
-    background-color: #fff;
-    border-radius: 0.5rem;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.jumbotron h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.jumbotron img {
-    border-radius: 50%;
-    max-width: 200px;
-    margin-bottom: 1rem;
-}
-
-/* Scroll-Up Button */
 .scroll-up {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
+    display: none;
 }
 
-.scroll-up .btn {
-    background-color: #007bff;
-    color: white;
+.scroll-up button {
+    background-color: #80ed99;
     border: none;
+    padding: 10px;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-.scroll-up .btn:hover {
-    background-color: #0056b3;
+.scroll-up button:hover {
+    background-color: #95d5b2;
 }
 
-/* Sections */
-.animated-section {
-    padding: 2rem 0;
+.scroll-up i {
+    color: white;
 }
 
-.education-container, .certifications-container, .projects-container, .additional-info-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-.education-item, .certification-item, .project-item, .info-item {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.education-item:hover, .certification-item:hover, .project-item:hover, .info-item:hover {
-    transform: translateY(-5px);
-}
-
-h2, h3 {
-    color: #0056b3; /* Darker blue for headings */
-}
-
-/* Footer */
-.contact-section {
-    background-color: #343a40;
-    color: #f8f9fa;
-    padding: 2rem 0;
-}
-
-.contact-section .contact-details {
-    padding: 1rem;
-}
-
-.contact-section .contact-details ul {
-    list-style: none;
-}
-
-.contact-section .contact-details li {
-    margin-bottom: 0.5rem;
-}
-
-.contact-section .contact-details a {
-    color: #f8f9fa;
-    text-decoration: none;
-}
-
-.contact-section .contact-details a:hover {
-    text-decoration: underline;
-}
-
-.footer-bottom {
+/* Jumbotron Styles */
+.jumbotron {
+    background-color: #95d5b2;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 1rem;
-    background-color: #343a40;
-    color: #f8f9fa;
 }
 
-.footer-bottom p {
-    margin: 0;
+.jumbotron h3 {
+    margin-bottom: 15px;
 }
 
-/* Responsive */
+.jumbotron:hover {
+    background-color: #80ed99;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Education Section Grid */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.education-item {
+    background-color: #d8f3dc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.education-item h4 {
+    margin-bottom: 10px;
+    color: #1b4332;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    margin: 30px 0;
+}
+
+.progress-bar {
+    background-color: #95d5b2;
+    border-radius: 20px;
+    height: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.progress-bar-fill {
+    background-color: #1b4332;
+    height: 100%;
+    border-radius: 20px;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.skills-section h4 {
+    margin-bottom: 10px;
+}
+
+/* Responsive Menu Styles */
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-toggle.active ~ .navbar ul {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: #2d6a4f;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
     }
 
-    .navbar-nav .nav-link {
-        padding: 0.5rem 0;
+    .menu-toggle {
+        display: block;
     }
+}
+
+/* Contact Section and Footer */
+footer {
+    background-color: #1b4332;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #80ed99;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* Grid Layout for Contact */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.contact-grid-item {
+    background-color: #d8f3dc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
