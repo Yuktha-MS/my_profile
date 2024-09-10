@@ -14,7 +14,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact" class="contact-button">Contact Me</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="scroll-up">
@@ -23,17 +23,21 @@
     </header>
 
     <section id="home" class="animated-section">
-        <div class="profile-container">
-            <img src="https://via.placeholder.com/400x400" alt="Your Photo" class="profile-img">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hello! I'm Yuktha, a passionate and creative problem solver.</p>
-            <button class="cta-button" onclick="location.href='#contact'">Contact Me</button>
+        <div class="hero">
+            <div class="hero-image">
+                <p class="image-placeholder">Image</p>
+            </div>
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Hello! I'm Yuktha, a passionate and creative problem solver.</p>
+                <button class="cta-button" onclick="location.href='#contact'">Contact Me</button>
+            </div>
         </div>
     </section>
 
     <section id="about" class="animated-section">
         <h2>About Me</h2>
-        <p>Well organized, creative, and a strong problem solver with outstanding analytical and decision-making competence. High intellectual capacity to learn, retain and apply new concepts of varying complexity. Excellent planning skills in setting and achieving goals, including meeting tight deadlines.</p>
+        <p>Well Organized, creative and a strong problem solver with outstanding analytical and decision-making competence. High intellectual capacity to learn, retain and apply new concepts of varying complexity. Excellent planning skills in setting and achieving goals, including meeting tight deadlines.</p>
     </section>
 
     <section id="resume" class="animated-section">
@@ -41,95 +45,128 @@
 
         <div class="jumbotron">
             <h3>Education</h3>
-            <div class="education-container">
-                <div class="education-item">
-                    <h4>MCA</h4>
-                    <p>A.B.S College of Engineering, Belgum</p>
-                    <p>2025 - 7.33 CGPA</p>
-                </div>
-                <div class="education-item">
-                    <h4>BSc (PMC)</h4>
-                    <p>MNO College</p>
-                    <p>2023 - 8.0 CGPA</p>
-                </div>
-                <div class="education-item">
-                    <h4>PUC</h4>
-                    <p>MNO College</p>
-                    <p>2020 - 85.1%</p>
-                </div>
-                <div class="education-item">
-                    <h4>SSLC</h4>
-                    <p>Indian English High School, skp</p>
-                    <p>2018 - 90%</p>
-                </div>
+            <div class="grid-container">
+                <div class="grid-item"><strong>Course</strong></div>
+                <div class="grid-item"><strong>Institute</strong></div>
+                <div class="grid-item"><strong>Year</strong></div>
+                <div class="grid-item"><strong>Percentage/CGPA</strong></div>
+                
+                <div class="grid-item">MCA</div>
+                <div class="grid-item">A.B.S College of Engineering, Belgum</div>
+                <div class="grid-item">2025</div>
+                <div class="grid-item">7.33 CGPA</div>
+
+                <div class="grid-item">BSc (PMC)</div>
+                <div class="grid-item">MNO College</div>
+                <div class="grid-item">2023</div>
+                <div class="grid-item">8.0 CGPA</div>
+
+                <div class="grid-item">PUC</div>
+                <div class="grid-item">MNO College</div>
+                <div class="grid-item">2020</div>
+                <div class="grid-item">85.1%</div>
+
+                <div class="grid-item">SSLC</div>
+                <div class="grid-item">Indian English High School, skp</div>
+                <div class="grid-item">2018</div>
+                <div class="grid-item">90%</div>
             </div>
         </div>
 
         <div class="jumbotron">
             <h3>Key Skills</h3>
-            <div class="progress-bars">
-                <div class="progress-bar">
-                    <div class="progress" style="width: 80%;">Java</div>
+            <div class="skills">
+                <div class="skill">
+                    <span>Java</span>
+                    <div class="progress-bar" data-value="80%"></div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 75%;">DBMS</div>
+                <div class="skill">
+                    <span>DBMS</span>
+                    <div class="progress-bar" data-value="75%"></div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 70%;">Python</div>
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="progress-bar" data-value="70%"></div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 65%;">VB.Net</div>
+                <div class="skill">
+                    <span>VB.Net</span>
+                    <div class="progress-bar" data-value="65%"></div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 60%;">C</div>
+                <div class="skill">
+                    <span>C</span>
+                    <div class="progress-bar" data-value="60%"></div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 55%;">C++</div>
+                <div class="skill">
+                    <span>C++</span>
+                    <div class="progress-bar" data-value="65%"></div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 80%;">HTML</div>
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="progress-bar" data-value="85%"></div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 70%;">CSS</div>
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="progress-bar" data-value="80%"></div>
                 </div>
             </div>
         </div>
 
         <div class="jumbotron">
             <h3>Certifications</h3>
-            <ul>
-                <li>Coursera certified by University of Michigan | Getting started with Python</li>
-                <li>AWS Cloud Practitioner | Certificate of participating in “AWS Hands-On Workshop” held by Department of Computer Applications, A.B.S College of Engineering.</li>
-            </ul>
+            <div class="certifications">
+                <div class="certification">
+                    <p>Coursera certified by University of Michigan | Getting started with Python</p>
+                </div>
+                <div class="certification">
+                    <p>AWS Cloud Practitioner | Certificate of participating in “AWS Hands-On Workshop” held by Department of Computer Applications, A.B.S College of Engineering.</p>
+                </div>
+            </div>
         </div>
 
         <div class="jumbotron">
             <h3>Student Projects</h3>
-            <ul>
-                <li>Inventory Management System: Our team of three collaborated on developing a web app for inventory management, specifically for a plumber shop using VB.Net and MS Access.</li>
-                <li>Photography Website: Built a responsive website for a professional Instagram photographer, collaborating with a 2-member team.</li>
-            </ul>
+            <div class="projects">
+                <div class="project">
+                    <p>Inventory Management System: Our team of three collaborated on developing a web app for inventory management, specifically for a plumber shop using VB.Net and MS Access.</p>
+                </div>
+                <div class="project">
+                    <p>Photography Website: Built a responsive website for a professional Instagram photographer, collaborating with a 2-member team.</p>
+                </div>
+            </div>
         </div>
 
         <div class="jumbotron">
             <h3>Additional Information</h3>
-            <ul>
-                <li>Languages: English, Hindi</li>
-                <li>Date of Birth: 01/01/2001</li>
-            </ul>
+            <div class="additional-info">
+                <div class="info-item">
+                    <strong>Languages:</strong> English, Hindi
+                </div>
+                <div class="info-item">
+                    <strong>Date of Birth:</strong> 01/01/2001
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="animated-section">
-        <h2>Contact</h2>
-        <ul>
-            <li>Phone: 8088010102</li>
-            <li>Email: <a href="mailto:yuktha0808@gmail.com">yuktha0808@gmail.com</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/yuktha-1234" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
-            <li>GitHub: <a href="https://yuktha-ms.github.io/my_profile/#" target="_blank"><i class="fab fa-github"></i> GitHub Profile</a></li>
-            <li>Address: abc, def, ghi</li>
-        </ul>
-    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-item">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Phone: 8088010102</li>
+                        <li>Email: <a href="mailto:yuktha0808@gmail.com">yuktha0808@gmail.com</a></li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/yuktha-1234" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
+                        <li>GitHub: <a href="https://yuktha-ms.github.io/my_profile/#" target="_blank"><i class="fab fa-github"></i> GitHub Profile</a></li>
+                        <li>Address: abc, def, ghi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Yuktha. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
