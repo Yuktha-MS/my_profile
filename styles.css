@@ -234,14 +234,13 @@ footer p {
 
 .profile-text {
     position: absolute;
-    top: 20%; /* Adjust based on how much cropping you did */
+    top: 12%; /* Adjust based on how much cropping you did */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Center text vertically */
     color: #fff; /* White text */
     text-align: center; /* Center text */
     max-width: 300px; /* Limit width */
     padding: 0.5rem; /* Padding around text */
-    border-radius: 8px; /* Rounded corners if needed */
 }
 
 .lead {
@@ -249,17 +248,17 @@ footer p {
 }
 
 .highlight {
-    font-size: 1.5rem; /* Larger font size for emphasis */
+    font-size: 2 rem; /* Larger font size for emphasis */
     font-weight: bold; /* Bold text */
 }
 
 .bold {
-    font-size: 2rem; /* Larger font size for emphasis */
+    font-size: 2.5rem; /* Larger font size for emphasis */
     font-weight: bold; /* Bold text */
 }
 
 .italic {
-    font-size: 1.2rem; /* Slightly larger font size */
+    font-size: 1.8rem; /* Slightly larger font size */
     font-style: italic; /* Italic text */
 }
 
@@ -275,4 +274,3 @@ footer p {
     animation: typing 4s steps(30, end) 1s 1 normal both;
     font-family: 'Courier New', Courier, monospace; /* Monospaced font for typing effect */
 }
-
