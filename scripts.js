@@ -1,14 +1,3 @@
-// Smooth scrolling to sections
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
 // Function to scroll to the top of the page
 function scrollToTop() {
     window.scrollTo({
@@ -17,31 +6,57 @@ function scrollToTop() {
     });
 }
 
-// Animation for sections as they come into view
-const sections = document.querySelectorAll('.animated-section');
+// Function to animate progress bars
+function animateProgressBars() {
+    const progressBars = document.querySelectorAll('.progress');
 
-function animateOnScroll() {
-    const triggerHeight = window.innerHeight * 0.8;
-
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-
-        if (sectionTop < triggerHeight) {
-            section.classList.add('visible');
-        }
+    progressBars.forEach(bar => {
+        const value = bar.getAttribute('data-value');
+        bar.style.width = value;
+        bar.textContent = value;
     });
 }
 
-// Event listeners
-window.addEventListener('scroll', animateOnScroll);
-document.addEventListener('DOMContentLoaded', animateOnScroll);
+// Function to initialize animations and dynamic features
+function init() {
+    animateProgressBars();
 
-// Add a transition effect to the scroll-up button
-document.querySelector('.scroll-up button').addEventListener('mouseover', function() {
-    this.style.transform = 'scale(1.1)';
-    this.style.transition = 'transform 0.3s ease';
-});
+    // Adding scroll event listener for section highlighting
+    const sections = document.querySelectorAll('.animated-section');
+    const navLinks = document.querySelectorAll('nav ul li a');
 
-document.querySelector('.scroll-up button').addEventListener('mouseout', function() {
-    this.style.transform = 'scale(1)';
+    window.addEventListener('scroll', () => {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+}
+
+// Initialize features on page load
+window.addEventListener('load', init);
+
+// Adding event listeners for hover effects on jumbotrons
+const jumbotrons = document.querySelectorAll('.jumbotron');
+
+jumbotrons.forEach(jumbotron => {
+    jumbotron.addEventListener('mouseover', () => {
+        jumbotron.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
+    });
+    
+    jumbotron.addEventListener('mouseout', () => {
+        jumbotron.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    });
 });
