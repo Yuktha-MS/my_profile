@@ -214,15 +214,3 @@ footer p {
     text-align: center;
 }
 
-
-.profile-img-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.profile-img {
-    width: 250px; /* Adjust this size as per your preference */
-    height: auto;
-    border-radius: 50%; /* Makes the image circular */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-}
