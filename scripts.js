@@ -1,33 +1,47 @@
-// Scroll to Top Function
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+// Smooth scrolling to sections
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-// Image Preview Function
-document.getElementById('fileInput').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const preview = document.getElementById('preview');
-            preview.src = e.target.result;
-            preview.style.display = 'block';
-        };
-        reader.readAsDataURL(file);
-    }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
-// Animated Sections on Scroll
-document.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('.animated-section');
-    const viewportHeight = window.innerHeight;
+// Function to scroll to the top of the page
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Animation for sections as they come into view
+const sections = document.querySelectorAll('.animated-section');
+
+function animateOnScroll() {
+    const triggerHeight = window.innerHeight * 0.8;
 
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < viewportHeight) {
+
+        if (sectionTop < triggerHeight) {
             section.classList.add('visible');
-        } else {
-            section.classList.remove('visible');
         }
     });
+}
+
+// Event listeners
+window.addEventListener('scroll', animateOnScroll);
+document.addEventListener('DOMContentLoaded', animateOnScroll);
+
+// Add a transition effect to the scroll-up button
+document.querySelector('.scroll-up button').addEventListener('mouseover', function() {
+    this.style.transform = 'scale(1.1)';
+    this.style.transition = 'transform 0.3s ease';
+});
+
+document.querySelector('.scroll-up button').addEventListener('mouseout', function() {
+    this.style.transform = 'scale(1)';
 });
