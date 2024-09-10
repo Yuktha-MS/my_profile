@@ -228,13 +228,13 @@ footer p {
 .profile-img {
     max-width: 100%;
     height: auto;
-    border-radius: 85%; /* Makes the profile picture circular */
+    border-radius: 50%; /* Makes the profile picture circular */
 }
 
 .profile-text {
     position: absolute;
     top: 50%;
-    right: 0;
+    left: 100%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
     color: #fff; /* White text */
@@ -242,7 +242,8 @@ footer p {
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
     max-width: 300px; /* Limit width */
-    text-align: right; /* Align text to the right */
+    text-align: left; /* Align text to the left */
+    animation: fadeIn 1s ease-out;
 }
 
 .lead {
@@ -262,4 +263,17 @@ footer p {
 .italic {
     font-size: 1.2rem; /* Slightly larger font size */
     font-style: italic; /* Italic text */
+}
+
+/* Animation for typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.typewrite {
+    overflow: hidden; /* Ensures text is hidden until animation is complete */
+    white-space: nowrap; /* Keeps text in one line */
+    animation: typing 4s steps(30, end) 1s 1 normal both;
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for typing effect */
 }
