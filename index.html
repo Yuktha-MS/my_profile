@@ -3,123 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben's Resume - Profile Page</title>
+    <title>Yuktha's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- MENU BAR -->
-    <nav class="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">Ben Resume</a>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="#intro" class="nav-link">Introduction</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
-                <li class="nav-item"><a href="#testimonials" class="nav-link">Reviews</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="#" class="download-btn" download>Download CV</a>
+        </nav>
+        <div class="scroll-up">
+            <button onclick="scrollToTop()">▲</button>
         </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero" id="intro">
-        <div class="container">
-            <img src="images/ben.jpg" alt="Ben's Photo" class="hero-img">
-            <div class="hero-text">
-                <h1>👋 Ben, a digital nomad</h1>
-                <a href="mailto:hello@company.co" class="email-link">hello@company.co</a>
-            </div>
-        </div>
+    </header>
+    
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hello! I'm Yuktha, a passionate and creative problem solver.</p>
     </section>
 
-    <!-- ABOUT ME -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-info">
-                <h3>This is Ben's Resume</h3>
-                <p>Ben Resume HTML Template is brought to you by <a href="https://www.tooplate.com" target="_blank" rel="noopener noreferrer">Tooplate</a>. Feel free to edit and use this page for your site.</p>
-                <ul>
-                    <li><strong>Full Name:</strong> Ben Wilson</li>
-                    <li><strong>Date of Birth:</strong> 26 September 1999</li>
-                    <li><strong>Website:</strong> company.co</li>
-                    <li><strong>Email:</strong> hello@company.co</li>
-                </ul>
-            </div>
-            <img src="images/true-agency.jpg" alt="About Image" class="about-img">
-            <div class="about-details">
-                <div>
-                    <h3>Integer volutpat</h3>
-                    <p>Sed eu risus tincidunt, finibus dolor non, gravida ex...</p>
-                </div>
-                <div>
-                    <h3>Mauris semper</h3>
-                    <p>Cras et nisl vestibulum, accumsan elit sed, pretium enim...</p>
-                </div>
-                <div>
-                    <h3>Integer id neque</h3>
-                    <p>Duis at mollis leo, venenatis congue ex...</p>
-                </div>
-            </div>
-        </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Well Organized, creative and a strong problem solver with outstanding analytical and decision-making competence. High intellectual capacity to learn, retain and apply new concepts of varying complexity. Excellent planning skills in setting and achieving goals, including meeting tight deadlines.</p>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h3>What People Say</h3>
-            <div class="testimonial">
-                <img src="images/testimonials/testimonial-image01.jpg" alt="Testimonial 1">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                <h6>Ben</h6>
-                <span>Art Director</span>
-            </div>
-            <!-- Add more testimonials as needed -->
-        </div>
+    <section id="resume">
+        <h2>Resume</h2>
+        <h3>Education</h3>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Institute</th>
+                <th>Year of Passing</th>
+                <th>Percentage/CGPA</th>
+            </tr>
+            <tr>
+                <td>MCA</td>
+                <td>A.B.S College of Engineering, Belgum</td>
+                <td>2025</td>
+                <td>7.33 CGPA</td>
+            </tr>
+            <tr>
+                <td>BSc (PMC)</td>
+                <td>MNO College</td>
+                <td>2023</td>
+                <td>8.0 CGPA</td>
+            </tr>
+            <tr>
+                <td>PUC</td>
+                <td>MNO College</td>
+                <td>2020</td>
+                <td>85.1%</td>
+            </tr>
+            <tr>
+                <td>SSLC</td>
+                <td>Indian English High School, skp</td>
+                <td>2018</td>
+                <td>90%</td>
+            </tr>
+        </table>
+
+        <h3>Key Skills</h3>
+        <p>Technical Skills: Java, DBMS, Python, VB.Net, C, C++, HTML, CSS</p>
+        <p>Soft Skills: Negotiation, Creative, Problem solving, Communication</p>
+
+        <h3>Certifications</h3>
+        <ul>
+            <li>Coursera certified by University of Michigan | Getting started with Python</li>
+            <li>AWS Cloud Practitioner | Certificate of participating in “AWS Hands-On Workshop” held by Department of Computer Applications, A.B.S College of Engineering.</li>
+        </ul>
+
+        <h3>Student Projects</h3>
+        <ul>
+            <li>Inventory Management System: Developed a web app for inventory management for a plumber shop using VB.Net and MS Access.</li>
+            <li>Photography Website: Built a responsive website for a professional Instagram photographer, collaborating with a 2-member team.</li>
+        </ul>
+
+        <h3>Extra-Curricular Activities</h3>
+        <ul>
+            <li>Participated in Quiz event.</li>
+            <li>Participated in Treasure hunt event.</li>
+        </ul>
+
+        <h3>Additional Information</h3>
+        <ul>
+            <li>Languages: English, Hindi</li>
+            <li>Date of Birth: 01/01/2001</li>
+        </ul>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h3>Frequently Asked Questions</h3>
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">Are those HTML templates absolutely free for any kind of usage?</button>
-                    <div class="accordion-content">
-                        <p>Yes, they are 100% free and there is no hidden charge...</p>
-                    </div>
-                </div>
-                <!-- Add more FAQ items as needed -->
-            </div>
-        </div>
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul>
+            <li>Phone: 8088010102</li>
+            <li>Email: <a href="mailto:yuktha0808@gmail.com">yuktha0808@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/yuktha-1234" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="icon"> LinkedIn Profile</a></li>
+            <li>GitHub: <a href="https://yuktha-ms.github.io/my_profile/#" target="_blank"><img src="github-icon.png" alt="GitHub" class="icon"> GitHub Profile</a></li>
+            <li>Address: abc, def, ghi</li>
+        </ul>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <div class="contact-info">
-                <h3>Say Hello</h3>
-                <p>010-020-0340</p>
-                <p><a href="mailto:hello@company.co">hello@company.co</a></p>
-                <ul class="social-links">
-                    <li><a href="https://fb.com/tooplate">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">YouTube</a></li>
-                </ul>
-                <p>&copy; 2024 Ben Resume Page | Design by <a href="https://www.tooplate.com">Tooplate</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCRIPTS -->
     <script src="scripts.js"></script>
 </body>
 </html>
-
