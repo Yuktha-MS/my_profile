@@ -227,7 +227,7 @@ footer p {
 
 .profile-img {
     max-width: 100%;
-    height: auto; 
+    height: auto;
     border-radius: 85%; /* Makes the profile picture circular */
 }
 
@@ -236,12 +236,12 @@ footer p {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.6);  Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
     color: #fff; /* White text */
     padding: 1rem;
-    border-radius: 1px; /* Rounded corners */
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  Shadow for better visibility */
-    max-width: 300px;  Limit width */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+    max-width: 300px; /* Limit width */
     text-align: right; /* Align text to the right */
 }
 
@@ -260,7 +260,6 @@ footer p {
 }
 
 .italic {
-    font-size: 1.5rem; /* Slightly larger font size */
+    font-size: 1.2rem; /* Slightly larger font size */
     font-style: italic; /* Italic text */
 }
-
