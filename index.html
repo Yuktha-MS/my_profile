@@ -11,88 +11,129 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#home">Yuktha M S</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+        <div class="navbar navbar-expand-lg bg-secondary fixed-top">
+            <a class="navbar-brand text-light" href="#home">Yuktha M S</a>
+            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-icon"><i class="fas fa-bars"></i></span>   
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link text-center bg-light text-secondary" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About Me</a>
+                        <a class="nav-link text-center bg-light text-secondary" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#resume">Resume</a>
+                        <a class="nav-link text-center bg-light text-secondary" href="#resume">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link text-center bg-light text-secondary" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
         <div class="scroll-up">
             <button onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
         </div>
     </header>
 
-   <section id="home" class="jumbotron text-center">
-    <div class="container">
-        <div class="profile-img-container">
-            <img src="yuktha_img.jpg" alt="yuktha_image" class="profile-img">
-            <div class="profile-text">
-                <p class="lead typewrite" style="color: rgb(255, 255, 255); font-weight: bold;">
-                    <span>=====================</span><br>
-                    <span class="highlight">Hey there,</span><br>
-                    <span class="bold">it's Yuktha!</span><br>
-                    <span >Glad to have you here—</span><br>
-                    <span class="italic">how's it going?</span>
-                    <br><span>=====================</span>
-                </p>
+    <section id="home" class="jumbotron text-center">
+        <div class="container">
+            <div class="container d-flex justify-content-center">
+                <div class="hero-text-container col-lg-8">
+                    <p class="lead typewrite">
+                        <span class="italic">Hey there,</span></br>
+                        <span class="italic">it's Yuktha!</span></br>
+                        <span class="italic">Glad to have you here—</span></br>
+                        <span class="italic">how's it going?</span></br>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+ 
 <br><br>
 
     <section id="about" class="text-center">
         <div class="container">
-            <h2>About Me</h2>
-            <p>Detail about Yuktha.</p>
+            <h3>About</h3>
+            <div class="jumbotron">
+                
+                <div class="container">
+                        <p>Well Organized, creative and a strong problem solver with outstanding analytical and decision-making competence. 
+                            High intellectual capacity to learn, retain and apply new concepts of varying complexity. 
+                            Excellent planning skills in setting and achieving goals, including meeting tight deadlines.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="resume">
         <div class="container">
-            <h2 class="text-center">Resume</h2>
+            <h2 class="text-center text-secondary">Resume</h2>
             <div class="jumbotron">
                 <h3>Education</h3>
                 <div class="education-container">
-                    <div class="education-item">
+                    <div class="education-item bg-light">
                         <h4>MCA</h4>
-                        <p>A.B.S College of Engineering, Belgum</p>
-                        <p>2025 - 7.33 CGPA</p>
+                        <p>B.M.S College of Engineering, Bengaluru</p>
                     </div>
-                    <div class="education-item">
-                        <h4>BSc (PMC)</h4>
-                        <p>MNO College</p>
-                        <p>2023 - 8.0 CGPA</p>
+                    <div class="education-item bg-light">
+                        <h4>BSc(PMC)</h4>
+                        <p>SDM Degree College</p>
                     </div>
-                    <div class="education-item">
+                    <div class="education-item bg-light">
                         <h4>PUC</h4>
-                        <p>MNO College</p>
-                        <p>2020 - 85.1%</p>
+                        <p>SDM PU College</p>
                     </div>
-                    <div class="education-item">
+                    <div class="education-item bg-light">
                         <h4>SSLC</h4>
-                        <p>Indian English High School, skp</p>
-                        <p>2018 - 90%</p>
+                        <p>Rotary English School</p>
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div class="container">
+            <div class="jumbotron">
+                <h3>Technical Skills</h3>
+                <div class="skill">
+                    <p>Java</p>
+                    <div class="progress-bar bg-dark bg-dark">
+                        <div class="progress" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Python</p>
+                    <div class="progress-bar bg-dark bg-dark">
+                        <div class="progress" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>HTML</p>
+                    <div class="progress-bar bg-dark bg-dark">
+                        <div class="progress" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>CSS</p>
+                    <div class="progress-bar bg-dark">
+                        <div class="progress" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+                <div class="skill"></div>
+                    <p>Javascript</p>
+                    <div class="progress-bar bg-dark">
+                        <div class="progress" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
             <div class="jumbotron">
                 <h3>Certifications</h3>
                 <div class="certification-container">
@@ -106,7 +147,9 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="container">
             <div class="jumbotron">
                 <h3>Student Projects</h3>
                 <div class="project-container">
@@ -120,31 +163,32 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+        
+        </div>
+        <div id="contact" class="container text-center">
+        <h3>Contact Information</h3>
             <div class="jumbotron">
-                <h3>Additional Information</h3>
-                <div class="additional-info">
-                    <p><strong>Languages:</strong> English, Hindi</p>
-                    <p><strong>Date of Birth:</strong> 01/01/2001</p>
-                </div>
+                <section id="contact">
+                    <ul>
+                        <li>Email: <a class="text-info" href="mailto:yuktha0815@gmail.com">yuktha0815@gmail.com</a></li>
+                        <li>LinkedIn: <a class="text-info" href="https://www.linkedin.com/in/yuktha-m-s-5302a4281" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
+                        <li>GitHub: <a class="text-info" href="https://github.com/Yuktha-MS" target="_blank"><i class="fab fa-github"></i> GitHub Profile</a></li>
+                    </ul>
+                </section>
             </div>
         </div>
+    </div>
     </section>
 
-    <section id="contact">
-        <footer>
-            <div class="container">
-                <ul>
-                    <li>Phone: 8088010102</li>
-                    <li>Email: <a href="mailto:yuktha0808@gmail.com">yuktha0808@gmail.com</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/yuktha-1234" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
-                    <li>GitHub: <a href="https://yuktha-ms.github.io/my_profile/#" target="_blank"><i class="fab fa-github"></i> GitHub Profile</a></li>
-                    <li>Address: abc, def, ghi</li>
-                </ul>
-                <p>&copy; 2024 Yuktha. All rights reserved.</p>
-            </div>
-        </footer>
-    </section>
+  
+    <footer class="bg-secondary">
+    <div class="container">
+        <p>&copy; 2024 Yuktha. All rights reserved.</p>
+    </div>
+</footer>
+
+
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
